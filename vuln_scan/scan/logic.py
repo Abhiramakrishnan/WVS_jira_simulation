@@ -42,7 +42,7 @@ def check_csrf(soup):
             return True
     return False
 
-def check_sql_injection(url):
+def check_sql_injection(url):# This function checks for sql injection vulnerability.
     payloads = [
         "' OR '1'='1", "' OR '1'='1' --", "' OR ''='",
         '" OR "1"="1', '" OR ""="', '1 OR 1=1',
