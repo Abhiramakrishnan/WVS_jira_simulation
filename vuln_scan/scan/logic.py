@@ -51,7 +51,7 @@ def check_sql_injection(url):
     ]
     for payload in payloads:
         try:
-            response = requests.get(url, params={'q': payload}, timeout=10)
+            response = requests.get(url, params={'q': payload}, timeout=10) #response for the provided input or the payload
             if any(error in response.text for error in [
                 "You have an error in your SQL syntax", "Warning: mysql_", "Unclosed quotation mark",
                 "quoted string not properly terminated", "SQLSTATE[HY000]"
