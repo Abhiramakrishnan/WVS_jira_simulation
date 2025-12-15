@@ -87,5 +87,6 @@ def check_broken_access_control(url):
             return True
     except requests.exceptions.RequestException as e:
         return {'error': f"Request failed during broken access control check: {e}"}
+    
     return False
 
